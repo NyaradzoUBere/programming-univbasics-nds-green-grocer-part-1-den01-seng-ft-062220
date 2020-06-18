@@ -16,7 +16,6 @@ end
 return nil
 end
 
-puts find_item_by_name_in_collection("SALSA", grocery_shelf)
 
 unconsolidated_cart = [
   {:item => "AVOCADO", :price => 3.00, :clearance => true },
