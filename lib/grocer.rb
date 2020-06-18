@@ -10,7 +10,7 @@ grocery_shelf = [
 def find_item_by_name_in_collection(name, collection)
 collection.each do |x|
   if name == x[:item]
-    puts x
+    return x
   end
 end
 return nil
