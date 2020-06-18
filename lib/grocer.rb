@@ -23,17 +23,9 @@ unconsolidated_cart = [
   {:item => "KALE", :price => 3.00, :clearance => false}
 ]
 
-# def consolidate_cart(cart)
-#   new_cart = []
-#   cart.each do |x|
-#     if cart [:item] > 1
-#       new_cart.push ([:count => ([:item].length)])
-#     end
-#     new_cart.push (x)
-#   end
-
-# end
-
-# puts consolidate_cart(unconsolidated_cart)
+def consolidate_cart(cart)
+  new_cart = cart.group_by(&:itself).map{|k, v| k.merge(count: v.length)}
+  return new_cart
+end
 
   
